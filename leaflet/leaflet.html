@@ -24,17 +24,17 @@
         iconSize: [30, 42],
         iconAnchor: [15, 42]
     });
-marker = L.marker([38.993500, -76.939934], {
+
+    marker = L.marker([38.993500, -76.939934], {
     	icon: icon
     }).addTo(map);
 
     marker.bindPopup("Popup content");
-    marker.on('mouseover', function (e) {
+    marker.onClick('click', function () {
         this.openPopup();
     });
-    marker.on('mouseout', function (e) {
-        this.closePopup();
-    });
+
+
 
 </script>
 </body>
