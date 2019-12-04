@@ -56,14 +56,17 @@ body {font-family: "Lato", sans-serif}
       <div class="dropdown">
         <button class="dropbtn">Dropdown</button>
         <div class="dropdown-content">
-          <a href="#">Link 1</a>
-          <a href="#">Link 2</a>
-          <a href="#">Link 3</a>
+          <a href="#">I</a>
+          <a href="#">II</a>
+          <a href="#">III</a>
+          <a href="#">IV</a>
+          <a href="#">V</a>
+          <a href="#">VI</a>
         </div>
       </div> 
 
 <!-- Clickable button -->
-<button class="button" onclick="loadLeaflet()">Load District Data</button>
+<button class="button" onclick="loadLeaflet()">Select District</button>
 
 <!-- Image of location/map -->
 <img src="/w3images/map.jpg" class="w3-image w3-greyscale-min" style="width:100%">
@@ -104,15 +107,17 @@ window.onclick = function(event) {
   }
 }
 /* Dropdown Code */
-/* Hardcode districts
+/*Hardcode districts
 
 fetch('/dropdown')
 .then(res => res.json())
 .then(res => {
-
 */
-let uniquedistricts = ["I", "II", "III", "IV", "V", "VI"];
   /* Populate dropdown list  */
+
+/*
+let uniquedistricts = ["I", "II", "III", "IV", "V", "VI"];
+
   let dropdown = document.getElementById("dropdown");
   for(let i=0; i<uniquedistricts.length; i++){
     let ele = document.createElement("option");
@@ -121,7 +126,7 @@ let uniquedistricts = ["I", "II", "III", "IV", "V", "VI"];
     ele.value = num;
     dropdown.appendChild(ele);
     }
-
+*/
 
 /* Leaflet Code */
 /* Not using post for now */
