@@ -10,14 +10,7 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" type="text/css" href="styles.css">
- 
- 
-<style>
-body {font-family: "Lato", sans-serif}
-.mySlides {display: none}
-</style>
- 
-</head>
+ </head>
  
 <body>
 <!-- Navbar -->
@@ -27,7 +20,6 @@ body {font-family: "Lato", sans-serif}
     <a href="index.html" class="w3-bar-item w3-button w3-padding-large">HOME</a>
     <a href="about.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">ABOUT</a>
     <a href="documentation.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">DOCUMENTATION</a>
- 
     <a href="javascript:void(0)" class="w3-padding-large w3-hover-red w3-hide-small w3-right"><i class="fa fa-search"></i></a>
   </div>
 </div>
@@ -36,28 +28,24 @@ body {font-family: "Lato", sans-serif}
 <div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
   <a href="#about" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">ABOUT</a>
   <a href="#documentation" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">DOCUMENTATION</a>
- 
- 
-  <a href="#" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">MERCH</a>
+  <a href="#" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()"></a>
 </div>
  
 <!-- Page content -->
 <div class="w3-content" style="max-width:2000px;margin-top:46px">
  
- 
   <!-- The about Section -->
   <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="about">
     
-
     <h2 class="w3-wide">Speed Camera Mapping Service</h2>
 
     <!-- Borrowed image from telegraph.co.uk -->
-    <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fsecure.i.telegraph.co.uk%2Fmultimedia%2Farchive%2F01861%2FspeedCamera_1861957a.jpg&f=1&nofb=1" style="width:100%">
+      <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fsecure.i.telegraph.co.uk%2Fmultimedia%2Farchive%2F01861%2FspeedCamera_1861957a.jpg&f=1&nofb=1" style="width:100%">
  
-    <p class="w3-justify">Welcome to our system! This website is meant to provide Prince George's County residents with locations of speed cameras. Please scroll down to begin using our service.</p>
-    <p class="w3-justify">The 'Home' page holds our main feature - the mapping and listing service. The 'About' page will tell users more about the speed trap issues. Lastly, the 'Documentation' page provides users with in-depth instructions and help.</p>
+      <p class="w3-justify">Welcome to our system! This website is meant to provide Prince George's County residents with locations of speed cameras. Please scroll down to begin using our service.</p>
+      <p class="w3-justify">The 'Home' page holds our main feature - the mapping and listing service. The 'About' page will tell users more about the speed trap issues. Lastly, the 'Documentation' page provides users with in-depth instructions and help.</p>
  
-      <h3>Search by District:</h3>
+    <h3>Search by District:</h3>
  
       <div class="dropdown">
         <button class="dropbtn">Dropdown</button>
@@ -71,50 +59,12 @@ body {font-family: "Lato", sans-serif}
       <!-- Clickable button -->
       <button class="button">Click Me</button>
 
-
 <!-- Image of location/map 
 <img src="/w3images/map.jpg" class="w3-image w3-greyscale-min" style="width:100%">
 -->
-
-
-
-<div id="map"></div> 
-
-
-<!-- Script
-function initMap() { 
-        var test= {lat: 38.986, lng: -76.942}; 
-        var map = new google.maps.Map(document.getElementById('map'), { 
-          zoom: 4, 
-          center: test 
-        }); 
-
-      } 
-
-
-      
--->
-
-
-
  
 <script>
-// Automatic Slideshow - change image every 4 seconds
-var myIndex = 0;
-carousel();
- 
-function carousel() {
-  var i;
-  var x = document.getElementsByClassName("mySlides");
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";  
-  }
-  myIndex++;
-  if (myIndex > x.length) {myIndex = 1}    
-  x[myIndex-1].style.display = "block";  
-  setTimeout(carousel, 4000);    
-}
- 
+
 // Used to toggle the menu on small screens when clicking on the menu button
 function myFunction() {
   var x = document.getElementById("navDemo");
@@ -133,27 +83,7 @@ window.onclick = function(event) {
   }
 }
 
-
-// Initialize and add the map
-function initMap() {
-  // The location of Uluru
-  var uluru = {lat: 38.971500, lng: -76.940308};
-  // The map, centered at Uluru
-  var map = new google.maps.Map(
-      document.getElementById('map'), {zoom: 6, center: uluru});
-  // The marker, positioned at Uluru
-  var marker = new google.maps.Marker({position: uluru, map: map});
-}
-
-
-</script>
-
-<script async defer 
-src= "https://maps.googleapis.com/maps/api/js?key=AIzaSyAErLGauDek3zJIw1KNtESdlLDQPiMQ6d0&callback=initMap"> 
 </script> 
  
 </body>
 </html>
- 
- 
-
