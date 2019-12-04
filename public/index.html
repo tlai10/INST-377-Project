@@ -62,19 +62,22 @@ body {font-family: "Lato", sans-serif}
       <div class="dropdown">
         <button class="dropbtn">Dropdown</button>
         <div class="dropdown-content">
-          <a href="#">Link 1</a>
-          <a href="#">Link 2</a>
-          <a href="#">Link 3</a>
+          <a href="#">I</a>	          
+          <a href="#">II</a>
+          <a href="#">III</a>
+          <a href="#">IV</a>
+          <a href="#">V</a>
+          <a href="#">VI</a>
         </div>
       </div>
 
       <!-- Clickable button -->
-      <button class="button">Click Me</button>
+      <button class="button" onclick="loadLeaflet()">Select District</button>
 
 
-<!-- Image of location/map 
+<!-- Image of location/map-->
 <img src="/w3images/map.jpg" class="w3-image w3-greyscale-min" style="width:100%">
--->
+
 
 
 
@@ -130,7 +133,7 @@ window.onclick = function(event) {
   }
 }
 // Initialize and add the map
-function initMap() {
+/*function initMap() { 
   // The location of Uluru
   var uluru = {lat: 38.971500, lng: -76.940308};
   // The map, centered at Uluru
@@ -139,11 +142,39 @@ function initMap() {
   // The marker, positioned at Uluru
   var marker = new google.maps.Marker({position: uluru, map: map});
 }
+*/
+/* Leaflet Code */
+/* Not using post for now */
+function loadLeaflet(){
+fetch('/leaflet')
+.then(res => res.json())
+.then(data => {
+  /* Map all needed variables, keep district for indexing/filtering */
+  let district = data.map(c => c.district);
+  let address = data.map(c => c.street_address);
+  let latitude = data.map(c => c.location_1.latitude);
+  let longitude = data.map(c => c.location_1.longitude);
+  let arr = [];
+  let ele = [];
+  let drop = document.getElementById("dropdown");
+  let currOption = drop.options[drop.selectedIndex].textContent;
+  /* Iterate through to create desired arrays*/
+  for(let i=0; i<district.length; i++){
+    if(district[i] === currOption){
+    ele = [address[i], latitude[i], longitude[i]]
+    arr[i] = ele;
+    }
+  }
+  /* Make readable */
+  arr = arr.join('\n');
+  
+  /* Double check (comment out when done) */
+  console.log(arr);
+  
+return arr;
+}
+)}
 </script>
-
-<script async defer 
-src= "https://maps.googleapis.com/maps/api/js?key=AIzaSyAErLGauDek3zJIw1KNtESdlLDQPiMQ6d0&callback=initMap"> 
-</script> 
  
 </body>
 </html>
