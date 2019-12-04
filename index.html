@@ -164,8 +164,6 @@ fetch('/leaflet')
       var marker = new L.Marker(markerLocation);
       map.addLayer(marker);
       marker.bindPopup(popupText);
-      marker.onClick('click', function () {
-          this.openPopup();
            }
 
   /* Double check (comment out when done) */
