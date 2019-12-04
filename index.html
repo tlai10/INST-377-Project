@@ -101,10 +101,14 @@ window.onclick = function(event) {
   }
 }
 /* Dropdown Code */
+/* Hardcode districts
 
 fetch('/dropdown')
 .then(res => res.json())
 .then(res => {
+
+*/
+let uniquedistricts = ["I", "II", "III", "IV", "V", "VI"];
   /* Populate dropdown list  */
   let dropdown = document.getElementById("dropdown");
   for(let i=0; i<uniquedistricts.length; i++){

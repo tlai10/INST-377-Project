@@ -37,8 +37,20 @@ app.use(express.json());
  */
 app.use(express.static('public'));
 
+   
+
+
+app.get('dropdown', (req, res) => {
+  const baseURL = 'https://data.princegeorgescountymd.gov/resource/mnkf-cu5c.json';
+  fetch(baseURL)
+    .then((r) => r.json())
+    .then((data) => {
+    
     /* Function to check for unique values */
     function contains(arr, value) {
+      if(arr.length === 0){
+        return false;
+      }
       for(let i=0; i<arr.length; i++){
         if(arr[i] === value){
           continue;
@@ -49,13 +61,6 @@ app.use(express.static('public'));
       return true;
     }
 
-
-app.get('dropdown', (req, res) => {
-  const baseURL = 'https://data.princegeorgescountymd.gov/resource/mnkf-cu5c.json';
-  fetch(baseURL)
-    .then((r) => r.json())
-    .then((data) => {
-    
     /* Get the districts */
     let alldistricts = [];
     alldistricts = data.map(c => c.district); 
