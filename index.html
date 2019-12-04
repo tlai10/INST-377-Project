@@ -118,12 +118,11 @@ let uniquedistricts = ["I", "II", "III", "IV", "V", "VI"];
     ele.value = num;
     dropdown.appendChild(ele);
     }
-          return res;
-        })
+
 
 /* Leaflet Code */
 /* Not using post for now */
-
+function loadLeaflet(){
 fetch('/leaflet')
 .then(res => res.json())
 .then(data => {
@@ -133,12 +132,16 @@ fetch('/leaflet')
   let latitude = data.map(c => c.location_1.latitude);
   let longitude = data.map(c => c.location_1.longitude);
   let arr = [];
-  let ele = '';
+  let ele = [];
+  let drop = document.getElementById("dropdown");
+  let currOption = drop.options[drop.selectedIndex].textContent;
 
   /* Iterate through to create desired arrays*/
   for(let i=0; i<district.length; i++){
+    if(district[i] === currOption){
     ele = [address[i], latitude[i], longitude[i]]
     arr[i] = ele;
+    }
   }
   /* Make readable */
   arr = arr.join('\n');
@@ -146,7 +149,9 @@ fetch('/leaflet')
   /* Double check (comment out when done) */
   console.log(arr);
   
+
 return arr;
+}
 
 
 })
