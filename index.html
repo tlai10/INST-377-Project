@@ -61,7 +61,10 @@ body {font-family: "Lato", sans-serif}
           <a href="#">Link 3</a>
         </div>
       </div> 
- 
+
+<!-- Clickable button -->
+<button class="button" onclick="loadLeaflet()">Load District Data</button>
+
 <!-- Image of location/map -->
 <img src="/w3images/map.jpg" class="w3-image w3-greyscale-min" style="width:100%">
  
@@ -152,9 +155,7 @@ fetch('/leaflet')
 
 return arr;
 }
-
-
-})
+)}
 
 
 
