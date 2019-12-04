@@ -37,25 +37,54 @@ app.use(express.json());
  */
 app.use(express.static('public'));
 
-// this is a single route, in the simplest possible format
-// the simplest format is not necessarily the best one.
-// this is, right now, an introduction to Callback Hell
-// but it is okay for a first-level example
-app.get('/api', (req, res) => {
-  const baseURL = 'https://api.umd.io/v0/courses/list';
+    /* Function to check for unique values */
+    function contains(arr, value) {
+      for(let i=0; i<arr.length; i++){
+        if(arr[i] === value){
+          continue;
+        } else {
+        return false;
+        }
+      }
+      return true;
+    }
+
+
+app.get('dropdown', (req, res) => {
+  const baseURL = 'https://data.princegeorgescountymd.gov/resource/mnkf-cu5c.json';
   fetch(baseURL)
     .then((r) => r.json())
+    .then((data) => {
     
-    .then(data => {
-      data = data.filter(data=> data.dept_id === "INST");
-      var array = {};
-      for(let i = 0; i< data.length; i++){
-        array[data[i].course_id]= data[i].name
-      }
-      res.send({array});
-      console.log(array);
-    })
+    /* Get the districts */
+    let alldistricts = [];
+    alldistricts = data.map(c => c.district); 
 
+    /* Creating unique district */
+    let uniquedistricts = []
+    for(let i=0; i<alldistricts.length; i++){
+      if(!contains(uniquedistricts, alldistricts[i])){
+        uniquedistricts.push(alldistricts[i]);
+        }
+      }
+    /* Send arr of unique districts to front end */
+      res.send({ uniquedistricts: uniquedistricts});
+    })
+    
+    .catch((err) => {
+      console.log(err);
+      res.redirect('/error');
+    });
+});
+
+
+app.get('leaflet', (req, res) => {
+  const baseURL = 'https://data.princegeorgescountymd.gov/resource/mnkf-cu5c.json';
+  fetch(baseURL)
+    .then((r) => r.json())
+    .then((data) => {
+      res.send({ data: data });
+    })
     .catch((err) => {
       console.log(err);
       res.redirect('/error');
