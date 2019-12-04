@@ -48,24 +48,108 @@ body {font-family: "Lato", sans-serif}
   <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="about">
     <h2 class="w3-wide">About Page</h2>
 
-    <!-- Borrowed image from geeky-gadgets.com -->
+
+    <!-- Borrowed image from geeky-gadgets.com 
     <img src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.geeky-gadgets.com%2Fwp-content%2Fuploads%2F2015%2F03%2Fspeed-camera.jpg&f=1&nofb=1" style="width:100%">
- 
+    -->
 
-    <p class="w3-justify">This 'About' page tell users more about the speed trap issues. Large amounts of people are negatively affected by speed traps and pay heavily.</p>
+<!-- Borrowed from https://www.w3schools.com/howto/howto_js_slideshow.asp-->
 
-    <h3 class="w3-wide">SAMPLE HEADING 1</h3>
-        <p class="w3-justify">SAMPLE PARAGRAPH TEXT.</p>
+<!-- Slideshow container -->
+<div class="slideshow-container">
+
+  <!-- Full-width images with number and caption text -->
+  <div class="mySlides fade">
+    <div class="numbertext">1 / 3</div>
+    <img src="https://external-content.duckduckgo.com/iu/?u=http://www.geeky-gadgets.com/wp-content/uploads/2015/03/speed-camera.jpg&f=1&nofb=1" style="width:100%">
+    <!--
+    <div class="text">Caption Text</div>
+    -->
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">2 / 3</div>
+    <img src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.helpingpeoplenc.com%2Fwp-content%2Fuploads%2F2019%2F04%2F58663710_s.jpg&f=1&nofb=1" style="width:100%">
+    <!--
+    <div class="text">Caption Two</div>
+    -->
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">3 / 3</div>
+    <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.pinimg.com%2Foriginals%2F81%2Fb2%2Fe3%2F81b2e30f42eeed4d6710ab46c3a505ff.jpg&f=1&nofb=1" style="width:100%">
+    <!--
+    <div class="text">Caption Three</div>
+    -->
+  </div>
+
+  <!-- Next and previous buttons -->
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<br>
+
+<!-- The dots/circles -->
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+</div> 
 
 
-    <h3 class="w3-wide">SAMPLE HEADING 2</h3>
-        <p class="w3-justify">SAMPLE PARAGRAPH TEXT.</p>
+  <h3 class="w3-wide">PG County Speed Camera Mapping Service</h3>
+    <p class="w3-justify">Welcome to our system! This website is meant to provide Prince George's County residents with locations of speed cameras. Please scroll down to begin using our service. The 'Home' page holds our main feature - the mapping and listing service. The 'About' page will tell users more about the speed trap issues. Lastly, the 'Documentation' page provides users with in-depth instructions and help.
+    </p>
 
-    <h3 class="w3-wide">SAMPLE HEADING 3</h3>
-        <p class="w3-justify">SAMPLE PARAGRAPH TEXT.</p>
- 
+  <h3 class="w3-wide">General Information about Speed Traps</h3>
+    <p class="w3-justify">
+        Speed cameras in Prince George’s County generated <b><mark>$6.8 million</mark></b> in revenue in 2018, with College Park alone collecting nearly $3 million in fines. Tickets and fines are given to drivers that are speeding 12mph or above the speed limit. For UMD students who are already paying thousands in tuition, unwanted speeding tickets can create additional stress. Especially for students that are not from the area, their unfamiliarity with the location of cameras can increase the risk of being fined.
+    </p>
+
+    <p class="w3-justify">
+        In addition, there has been increasing legislation to add more speed cameras on highways to decrease accidents. In June, a new law was passed to place speed cameras on Maryland Route 210 in southern Prince George’s County. These laws have been put in place in an effort to decrease speeds on the highway, but have also created more opportunities for drivers to generate higher fines. 
+    </p>
+
+    <p class="w3-justify">
+        Especially for students driving on and around campus, the speed limit drops drastically. On Route 1 (Baltimore Ave.), the current speed limit is 25 miles per hour, a 5 mile per hour decrease since 2014. While it has been enforced in order to ensure the safety of pedestrians and students walking in the area, it has also created a dilemma for drivers who have an increasingly difficult time navigating the roads without being ticketed.
+    </p>
+      
+    <p class="w3-justify">
+        Our project aims to <b><mark>increase the awareness of the locations of speed cameras</mark></b> in order to alleviate the stress of potential fines on UMD students. With the understanding that speed limits and cameras are put into place for the safety of both drivers and pedestrians, providing drivers with the knowledge of where speed cameras are located will allow for both a safer and more affordable environment.
+    </p>
+  
+  <h3 class="w3-wide">Sources</h3>
+    <p class="w3-justify">
+      <div text-align="left">
+
+        <ul class="demo">
+          <li>
+            <a href="https://dbknews.com/2019/10/11/umd-college-park-speed-limit-camera-route-1-safety/">
+              The Diamondback Newspaper
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://wtop.com/maryland/2019/06/new-law-allows-more-speed-cameras-on-one-md-highway-2/">
+              wtop News
+            </a>
+          </li>
+      
+          <a href="https://www.nbcwashington.com/news/local/Montgomery-Co-Speed-Cameras-Are-Maryland-Most-Lucrative-509947011.html">
+            NBC Washington
+          </a>
+        </ul>
+      
+      </div>
+
+
+    </p>
+
+
+
  
 <script>
+/*
 // Automatic Slideshow - change image every 4 seconds
 var myIndex = 0;
 carousel();
@@ -99,10 +183,34 @@ window.onclick = function(event) {
     modal.style.display = "none";
   }
 }
+*/
+/* ACTUAL slideshow script */
+var slideIndex = 1;
+showSlides(slideIndex);
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+} 
 </script>
  
 </body>
 </html>
- 
- 
-
