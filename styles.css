@@ -56,3 +56,16 @@
   height: 400px;  /* The height is 400 pixels */
   width: 100%;  /* The width is the width of the web page */
 }
+
+/* Highlighter settings */
+mark {
+  background-color: red;
+  color: whitesmoke;
+}
+
+/* UL */
+ul.demo {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
