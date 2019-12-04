@@ -156,6 +156,17 @@ fetch('/leaflet')
   }
   /* Make readable */
   arr = arr.join('\n');
+  for (var i=0; i<arr.length; i++) {
+      var lon = arr[i][2];
+      var lat = arr[i][1];
+      var popupText = arr[i][0];
+      var markerLocation = new L.LatLng(lat, lon);
+      var marker = new L.Marker(markerLocation);
+      map.addLayer(marker);
+      marker.bindPopup(popupText);
+      marker.onClick('click', function () {
+          this.openPopup();
+           }
 
   /* Double check (comment out when done) */
   console.log(arr);
@@ -180,17 +191,6 @@ var icon = L.divIcon({
     iconAnchor: [15, 42]
 });
 
-for (var i=0; i<arr.length; i++) {
-    var lon = arr[i][2];
-    var lat = arr[i][1];
-    var popupText = arr[i][0];
-    var markerLocation = new L.LatLng(lat, lon);
-    var marker = new L.Marker(markerLocation);
-    map.addLayer(marker);
-    marker.bindPopup(popupText);
-    marker.onClick('click', function () {
-        this.openPopup();
-         }
 
 
 
