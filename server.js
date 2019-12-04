@@ -89,6 +89,6 @@ app.get('leaflet', (req, res) => {
       console.log(err);
       res.redirect('/error');
     });
-});
+}); 
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));
