@@ -165,3 +165,27 @@ ul.demo {
   from {opacity: .4}
   to {opacity: 1}
 }
+
+/* Home page button - Borrowed from https://www.w3schools.com/css/css3_buttons.asp*/
+.button {
+  display: inline-block;
+  padding: 5px 10px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: rgb(0, 0, 0);
+  background-color:rgb(255, 255, 0);
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+.button:hover {background-color: rgb(255, 0, 0)}
+
+.button:active {
+  background-color: rgb(128, 0, 0);
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
