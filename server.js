@@ -55,7 +55,20 @@ app.get('dropdown', (req, res) => {
   fetch(baseURL)
     .then((r) => r.json())
     .then((data) => {
-    
+    /* Function to check for unique values */
+    function contains(arr, value) {
+      if(arr.length === 0){
+        return false;
+      }
+      for(let i=0; i<arr.length; i++){
+        if(arr[i] === value){
+          continue;
+        } else {
+        return false;
+        }
+      }
+      return true;
+    }
     /* Get the districts */
     let alldistricts = [];
     alldistricts = data.map(c => c.district); 
