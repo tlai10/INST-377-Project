@@ -192,9 +192,11 @@ transform: translateY(4px);
 }
 
 #map {
+  margin:auto;
   height: 500px;
-  width: 900px;
-  position: absolute;
+  display: flex;
+  justify-content: center;
+ 
 }
 .marker-pin {
 width: 30px;
