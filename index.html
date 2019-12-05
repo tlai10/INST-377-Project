@@ -9,7 +9,6 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" type="text/css" href="styles.css">
-  <link rel="stylesheet" href="leaflet.css">
   <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
   <script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
   <script src="https://kit.fontawesome.com/888dc0db7b.js" crossorigin="anonymous"></script>
@@ -67,10 +66,9 @@ body {font-family: "Lato", sans-serif}
           <a href="#">VI</a>
         </div>
       </div>
-<div id="map"></div>
 <!-- Clickable button -->
 <button class="button" onclick="loadLeaflet()">Select District</button>
-
+<div id="map"></div>
 <!-- Image of location/map -->
 <img src="/w3images/map.jpg" class="w3-image w3-greyscale-min" style="width:100%">
 
@@ -173,26 +171,44 @@ fetch('/leaflet')
 return arr;
 }
 )}
-
-var map = L.map('map',{
-center: [38.989697, -76.937759],
-zoom: 15
-});
-L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
-attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-}).addTo(map);
-
-var icon = L.divIcon({
-    className: 'custom-div-icon',
-    html: "<div style='background-color:#4838cc;' class='marker-pin'></div><i class='fa fa-camera awesome'>",
-    iconSize: [30, 42],
-    iconAnchor: [15, 42]
-});
-
-
-
-
 </script>
+<script>
+    var map = L.map('map',{
+    center: [38.989697, -76.937759],
+    zoom: 10
+    });
+    L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
+
+    var icon = L.divIcon({
+				className: 'custom-div-icon',
+        html: "<div style='background-color:#4838cc;' class='marker-pin'></div><i class='fa fa-camera awesome'>",
+        iconSize: [30, 42],
+        iconAnchor: [15, 42]
+    });
+    var markers = [
+               [ 38.952593,-76.942069, "Posted Speed: 25, Enforced Speed: 37" ],
+               [ 39.003744,-76.967017, "Posted Speed: 30, Enforced Speed: 42" ],
+               [ 39.104911,-76.866641, "Posted Speed: 40, Enforced Speed: 52" ],
+               [ 38.80328,-76.99046, "Posted Speed: 30, Enforced Speed: 42" ],
+               [ 39.035252,-76.918569, "Posted Speed: 25, Enforced Speed: 37" ],
+               [ 38.818501,-76.75007, "Posted Speed: 30, Enforced Speed: 42" ],
+               [ 38.960971,-76.740467, "Posted Speed: 30, Enforced Speed: 42" ],
+               [ 38.704471,-76.882348, "Posted Speed: 30, Enforced Speed: 42" ],
+               [ 38.879544,-76.826481, "Posted Speed: 35, Enforced Speed: 47" ],
+            ];
+
+for (var i = 0; i < markers.length; i++) {
+			marker = new L.marker([markers[i][0],markers[i][1]], {icon: icon})
+				.bindPopup(markers[i][2])
+				.addTo(map);
+		}
+</script>
+
+
+
+
 
 </body>
 </html>
