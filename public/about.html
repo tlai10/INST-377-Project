@@ -59,8 +59,10 @@
   </div>
 
   <!-- Next and previous buttons for images -->
+  <!--
   <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
   <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  -->
 </div>
 <br>
 
@@ -104,17 +106,19 @@
               The Diamondback Newspaper
             </a>
           </li>
-          
+          <br>
           <li>
             <a href="https://wtop.com/maryland/2019/06/new-law-allows-more-speed-cameras-on-one-md-highway-2/">
               wtop News
             </a>
           </li>
+          <br>
           <li>
             <a href="https://www.nbcwashington.com/news/local/Montgomery-Co-Speed-Cameras-Are-Maryland-Most-Lucrative-509947011.html">
               NBC Washington
             </a>
           </li>
+          <br>
         </ul>
       
       </div>
@@ -133,6 +137,7 @@ function plusSlides(n) {
 function currentSlide(n) {
   showSlides(slideIndex = n);
 }
+/*
 function showSlides(n) {
   var i;
   var slides = document.getElementsByClassName("mySlides");
@@ -147,7 +152,27 @@ function showSlides(n) {
   }
   slides[slideIndex-1].style.display = "block";
   dots[slideIndex-1].className += " active";
-} 
+}
+*/
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 3000); // Change image every 2 seconds
+}
 </script>
  
 </body>
