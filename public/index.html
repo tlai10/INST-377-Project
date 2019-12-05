@@ -122,37 +122,74 @@ window.onclick = function(event) {
         */
         /* Leaflet Code */
         /* Not using post for now */
-function loadLeaflet(){
-            fetch('/leaflet')
-              .then(res => res.json())
-              .then(data => {
-                /* Map all needed variables, keep district for indexing/filtering */
-                let district = data.map(c => c.district);
-                let address = data.map(c => c.street_address);
-                let latitude = data.map(c => c.location_1.latitude);
-                let longitude = data.map(c => c.location_1.longitude);
-                let arr = [];
-                let ele = [];
-                let drop = document.getElementById("dropdown");
-                let currOption = drop.options[drop.selectedIndex].textContent;
-                /* Iterate through to create desired arrays*/
-                for (let i = 0; i < district.length; i++) {
-                  if (district[i] === currOption) {
-                    ele = [address[i], latitude[i], longitude[i]]
-                    arr[i] = ele;
-                  }
-                }
-                /* Make readable */
-                arr = arr.join('\n');
-
-                /* Double check (comment out when done) */
-                console.log(arr);
-
-                return arr;
-              }
-              )}
-      </script>
-
+        function loadLeaflet(){
+fetch('/leaflet')
+.then(res => res.json())
+.then(data => {
+  /* Map all needed variables, keep district for indexing/filtering */
+  let district = data.map(c => c.district);
+  let address = data.map(c => c.street_address);
+  let latitude = data.map(c => c.location_1.latitude);
+  let longitude = data.map(c => c.location_1.longitude);
+  let arr = [];
+  let ele = [];
+  let drop = document.getElementById("dropdown");
+  let currOption = drop.options[drop.selectedIndex].textContent;
+  /* Iterate through to create desired arrays*/
+  for(let i=0; i<district.length; i++){
+    if(district[i] === currOption){
+    ele = [address[i], latitude[i], longitude[i]]
+    arr[i] = ele;
+    }
+  }
+  /* Make readable */
+  arr = arr.join('\n');
+  for (var i=0; i<arr.length; i++) {
+      var lon = arr[i][2];
+      var lat = arr[i][1];
+      var popupText = arr[i][0];
+      var markerLocation = new L.LatLng(lat, lon);
+      var marker = new L.Marker(markerLocation);
+      map.addLayer(marker);
+      marker.bindPopup(popupText);
+           }
+  /* Double check (comment out when done) */
+  console.log(arr);
+return arr;
+}
+)}
+</script>
+<script>
+    var map = L.map('map',{
+    center: [38.989697, -76.937759],
+    zoom: 10
+    });
+    L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
+    var icon = L.divIcon({
+				className: 'custom-div-icon',
+        html: "<div style='background-color:#4838cc;' class='marker-pin'></div><i class='fa fa-camera awesome'>",
+        iconSize: [30, 42],
+        iconAnchor: [15, 42]
+    });
+    var markers = [
+               [ 38.952593,-76.942069, "Posted Speed: 25, Enforced Speed: 37" ],
+               [ 39.003744,-76.967017, "Posted Speed: 30, Enforced Speed: 42" ],
+               [ 39.104911,-76.866641, "Posted Speed: 40, Enforced Speed: 52" ],
+               [ 38.80328,-76.99046, "Posted Speed: 30, Enforced Speed: 42" ],
+               [ 39.035252,-76.918569, "Posted Speed: 25, Enforced Speed: 37" ],
+               [ 38.818501,-76.75007, "Posted Speed: 30, Enforced Speed: 42" ],
+               [ 38.960971,-76.740467, "Posted Speed: 30, Enforced Speed: 42" ],
+               [ 38.704471,-76.882348, "Posted Speed: 30, Enforced Speed: 42" ],
+               [ 38.879544,-76.826481, "Posted Speed: 35, Enforced Speed: 47" ],
+            ];
+for (var i = 0; i < markers.length; i++) {
+			marker = new L.marker([markers[i][0],markers[i][1]], {icon: icon})
+				.bindPopup(markers[i][2])
+				.addTo(map);
+		}
+</script>
 </body>
 
 </html>
