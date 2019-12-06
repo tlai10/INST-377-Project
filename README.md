@@ -36,7 +36,7 @@ Once you have cloned the repository, here are the instructions to get the websit
 
 5. Now you can access the website. You will see a prompt in the terminal that says "Example app listening on port 5000!"
 
-6. Navigate to a Google Chrome browser and type in "localhost:5000" and you should see a working version of the website.
+6. Navigate to a Google Chrome browser and type in "localhost:5000" and you should see a working version of the website. When finished, hit ctr-C to end. 
 Some Organizational Notes:
 
 For Heroku:
@@ -47,7 +47,10 @@ For Heroku:
 
 3. Type heroku login
 
-4. Type heroku create to open the application.
+4. Type heroku open to open the application.
+
+5. If changes has made, type git add. --> git commit -m "" --> git push heroku master, to push the changes, so the webpage will display based on the changes you made. 
+
 
 
 
