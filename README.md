@@ -51,6 +51,23 @@ For Heroku:
 
 5. If changes has made, type git add. --> git commit -m "" --> git push heroku master, to push the changes, so the webpage will display based on the changes you made. 
 
+User Manual: 
+
+Home Page:
+This application can be used to find all of the speed cameras in any district of PG County and provide detailed information on all of these cameras.
+
+1. On the "Home" page, navigate to the "Dropdown" button and click on the button to open a selection of districts.
+2. Click on the district that you want to find speed cameras in.
+3. Click on the "Select District" button.
+4. Scroll down and look for camera objects on the map.
+5. Click on the points to see more detailed information such as the address, speed limit on the road, and the speed where the camera will take photos.
+
+About Page: 
+The about page provides background information on speed cameras in Prince George’s County. It addresses the problems that speed cameras create for drivers and recent legislation passed in PG County regarding the increase in cameras around the area. It also explains the purpose and goals of our project as well as its intended impact on the overall community.
+
+
+Documentation Page:
+The Documentation Page serves as a general and easy guide for new users to our system. On this page, users can see a general guide for each of the pages on the system. The 'Home' page is the only section to include a walk-through since the other two consist of text only.
 
 
 
