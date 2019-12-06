@@ -194,6 +194,7 @@ box-shadow: 0 5px #666;
 transform: translateY(4px);
 }
 
+
 #map {
   margin:auto;
   height: 500px;
@@ -213,7 +214,6 @@ top: 50%;
 margin: -15px 0 0 -15px;
 }
 
-
 .custom-div-icon i {
  position: absolute;
  width: 22px;
@@ -227,4 +227,9 @@ margin: -15px 0 0 -15px;
 .custom-div-icon i.awesome {
  margin: 12px auto;
  font-size: 17px;
+}
+
+/* Nav Bar */
+.W3-top{
+  position: absolute;
 }
