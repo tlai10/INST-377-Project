@@ -14,8 +14,13 @@ PGC_Election_Group
 
 The topic of this project is voting in Prince George’s County (PGC) elections, but the purpose is to help prepare voters with general information and digital ballots that are more informative and helpful in assisting the preparation of users with limited accessibility intending to vote. Users could ideally give feedback related to ballot errors, confusing questions, or general comments. People concerned with these issues include citizens who are going to vote, new and inexperienced voters, and people with low political literacy. For purposes of narrowing our scope and making something that is actually used, our stakeholders can be more directly defined as PGC citizens that intend to vote, but are not sure what their options are.
 
-Link to site:
+Link to User Manual:
+https://docs.google.com/document/d/1cLMq8jR0l8AG-hz8K_ZQ-W1nrwzWtYoeufdQzZRSvDE/edit#
 
+Link to Developer Manual: 
+https://docs.google.com/document/d/1Yo4UDBcLPntDAEJHiYOgFyC4TR3Ws8pWORY2qPcRz0c/edit
+
+Link to Heroku site:
 https://intense-basin-08466.herokuapp.com/index.html
 
 Target Browsers:
