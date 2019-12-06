@@ -73,9 +73,7 @@ The Documentation Page serves as a general and easy guide for new users to our s
 
 Libraries and their dependencies
 
-Leaflet - 
-
-
+Leaflet - Leaflet is a open source JavaScript library used to build web mapping applications
 
 node.js - This is the library that allowed us to build the web server for our website. We chose this library because it was the recommended one, and it somes with powerful tools like express, that make managing the framework a lot more feasible.
 
