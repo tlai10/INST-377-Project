@@ -1,5 +1,5 @@
 # INST 377 Project - Speed Camera Traps in PG County
-This repository was created for the group project in INST 377 (0103).
+This repository was created for the group project in INST 377 (0103) for Team 5 - Kyle Jackson, Edward Cheng, Tsun Lai, Emily Jia, Ian Dopsch, and Tarun Malik.
 
 ## Information Problem
 We are attempting to address and bring attention to the negative effects of speed traps in Prince George’s County through creating a mapping application. This will provide the locations as well as posted and enforced speed limits at each camera. Our information problem evolved from our initial problem of simply increasing awareness of speed cameras because we realized that there were already applications in place to address this problem such as Google Maps and Waze.
