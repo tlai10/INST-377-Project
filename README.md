@@ -10,8 +10,7 @@ Our primary stakeholders are drivers in Prince George’s County. We further div
 ## How our Final System Addresses the Problem
 While our system does provide similar solutions to existing systems such as Google Maps and Waze, we attempt to further inform our users of the purpose of our specific project. In particular through our about page, we provide background information on speed cameras in Prince George’s County as well as past and ongoing legislation regarding the continued implementation of cameras in the county. By keeping users up to date with what is happening in the area, we are able to keep users informed of both the benefits and dangers that speed cameras can pose to drivers.
 
-Link to User Manual:
-https://docs.google.com/document/d/1cLMq8jR0l8AG-hz8K_ZQ-W1nrwzWtYoeufdQzZRSvDE/edit#
+[Link to User Manual](https://docs.google.com/document/d/1cLMq8jR0l8AG-hz8K_ZQ-W1nrwzWtYoeufdQzZRSvDE/edit#)
 
 Link to Developer Manual: 
 https://docs.google.com/document/d/1Yo4UDBcLPntDAEJHiYOgFyC4TR3Ws8pWORY2qPcRz0c/edit?usp=sharing
