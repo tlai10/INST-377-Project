@@ -16,7 +16,7 @@ While our system does provide similar solutions to existing systems such as Goog
 
 [Link to Final Report (Google Doc)](https://docs.google.com/document/d/1w4GnI6qQ89Y5ZV0-3-qLQ7_EA2mqKeETamxbQIx2eiE/edit?usp=sharing)
 
-[Link to Heroku site (Google Doc)](https://intense-basin-08466.herokuapp.com/index.html)
+[Link to Heroku site](https://intense-basin-08466.herokuapp.com/index.html)
 
 ## Target Browsers:
 
