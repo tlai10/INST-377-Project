@@ -12,11 +12,11 @@ While our system does provide similar solutions to existing systems such as Goog
 
 [Link to User Manual](https://docs.google.com/document/d/1cLMq8jR0l8AG-hz8K_ZQ-W1nrwzWtYoeufdQzZRSvDE/edit#)
 
-Link to Developer Manual: 
-https://docs.google.com/document/d/1Yo4UDBcLPntDAEJHiYOgFyC4TR3Ws8pWORY2qPcRz0c/edit?usp=sharing
+[Link to Developer Manual](https://docs.google.com/document/d/1Yo4UDBcLPntDAEJHiYOgFyC4TR3Ws8pWORY2qPcRz0c/edit?usp=sharing)
 
-Link to Heroku site:
-https://intense-basin-08466.herokuapp.com/index.html
+[Link to Final Report](https://docs.google.com/document/d/1w4GnI6qQ89Y5ZV0-3-qLQ7_EA2mqKeETamxbQIx2eiE/edit?usp=sharing)
+
+[Link to Heroku site](https://intense-basin-08466.herokuapp.com/index.html)
 
 ## Target Browsers:
 
@@ -61,7 +61,3 @@ express - Express is a web application wireframe by node.js. This is what helps 
 Fetch - fetch allows one to make network requests, with the use of promises, to enable a clean API. We primarily used fetch as it we were able to practice a lot with it in class. This practice made us confident that we could use fetch to obtain the data we needed to for the purpose of the assignment.
 
 Heroku - Heroku is the application that we are using to host our website. This was fairly simple for us to use, making it the perfect host for the purpose of the assignment. Additionally, this was a recommended service.
-
-
-## Link to Final Report:
-https://docs.google.com/document/d/1w4GnI6qQ89Y5ZV0-3-qLQ7_EA2mqKeETamxbQIx2eiE/edit?usp=sharing
