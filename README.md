@@ -37,29 +37,27 @@ Once you have cloned the repository, here are the instructions to get the websit
 
 3. Type npm install --- save node-fetch. This only needs to be done on the first run of the server.
 
-4. Type npm start. Thiw will start the server and allow the website to be run.
+4. Type npm start. This will start the server and allow the website to be run.
 
 5. Now you can access the website. You will see a prompt in the terminal that says "Example app listening on port 5000!"
 
-6. Navigate to a Google Chrome browser and type in "localhost:5000" and you should see a working version of the website. When finished, hit ctr-C to end. 
-Some Organizational Notes:
+6. Navigate to a Google Chrome browser and type in "localhost:5000" and you should see a working version of the website. When finished, hit ctrl-C to end. Some Organizational Notes:
 
 For Heroku:
 
 1. Open up a terminal in your computer.
 
-2. Nevigate with terminal to the folder that the repository is held in
+2. Navigate with terminal to the folder that the repository is held in.
 
-3. Type heroku login
+3. Type heroku login.
 
 4. Type heroku open to open the application.
 
-5. If changes has made, type git add. --> git commit -m "" --> git push heroku master, to push the changes, so the webpage will display based on the changes you made. 
+5. If changes were made, type git add. --> git commit -m "" --> git push heroku master, to push the changes, so the webpage will display based on the changes you made.
 
-User Manual: 
+User Manual:
 
-Home Page:
-This application can be used to find all of the speed cameras in any district of PG County and provide detailed information on all of these cameras.
+Home Page: This application can be used to find all of the speed cameras in any district of PG County and provide detailed information on all of these cameras.
 
 1. On the "Home" page, navigate to the "Dropdown" button and click on the button to open a selection of districts.
 2. Click on the district that you want to find speed cameras in.
@@ -67,23 +65,22 @@ This application can be used to find all of the speed cameras in any district of
 4. Scroll down and look for camera objects on the map.
 5. Click on the points to see more detailed information such as the address, speed limit on the road, and the speed where the camera will take photos.
 
-About Page: 
-The about page provides background information on speed cameras in Prince George’s County. It addresses the problems that speed cameras create for drivers and recent legislation passed in PG County regarding the increase in cameras around the area. It also explains the purpose and goals of our project as well as its intended impact on the overall community.
+About Page: The about page provides background information on speed cameras in Prince George’s County. It addresses the problems that speed cameras create for drivers and recent legislation passed in PG County regarding the increase in cameras around the area. It also explains the purpose and goals of our project as well as its intended impact on the overall community.
 
-
-Documentation Page:
-The Documentation Page serves as a general and easy guide for new users to our system. On this page, users can see a general guide for each of the pages on the system. The 'Home' page is the only section to include a walk-through since the other two consist of text only.
-
-
+Documentation Page: The Documentation Page serves as a general and easy guide for new users to our system. On this page, users can see a general guide for each of the pages on the system. The 'Home' page is the only section to include a walk-through since the other two consist of text only.
 
 Libraries and their dependencies
 
-Leaflet - Leaflet is a open source JavaScript library used to build web mapping applications
+Leaflet - Leaflet is an open source JavaScript library used to build web mapping applications
 
-node.js - This is the library that allowed us to build the web server for our website. We chose this library because it was the recommended one, and it somes with powerful tools like express, that make managing the framework a lot more feasible.
+node.js - This is the library that allowed us to build the web server for our website. We chose this library because it was the recommended one, and it comes with powerful tools like express, that make managing the framework a lot more feasible.
 
-express - Express is a web application wirefram by node.js. This is what helps us organize the back end our application on the server side. Specific things that express does for our site ishandling requests and views.
+express - Express is a web application wireframe by node.js. This is what helps us organize the back end our application on the server side. Specific things that express does for our site is handling requests and views.
 
 Fetch - fetch allows one to make network requests, with the use of promises, to enable a clean API. We primarily used fetch as it we were able to practice a lot with it in class. This practice made us confident that we could use fetch to obtain the data we needed to for the purpose of the assignment.
 
 Heroku - Heroku is the application that we are using to host our website. This was fairly simple for us to use, making it the perfect host for the purpose of the assignment. Additionally, this was a recommended service.
+
+
+Link to Final Report:
+https://docs.google.com/document/d/1w4GnI6qQ89Y5ZV0-3-qLQ7_EA2mqKeETamxbQIx2eiE/edit?usp=sharing
