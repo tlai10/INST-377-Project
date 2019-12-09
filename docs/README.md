@@ -10,6 +10,11 @@ Our primary stakeholders are drivers in Prince George’s County. We further div
 ## How our Final System Addresses the Problem
 While our system does provide similar solutions to existing systems such as Google Maps and Waze, we attempt to further inform our users of the purpose of our specific project. In particular through our about page, we provide background information on speed cameras in Prince George’s County as well as past and ongoing legislation regarding the continued implementation of cameras in the county. By keeping users up to date with what is happening in the area, we are able to keep users informed of both the benefits and dangers that speed cameras can pose to drivers.
 
+## Target Browsers:
+
+We expect users of our website to be using browsers on laptops. This means that laptops are the target devices. Users who are on a laptop should use browsers such as Firefox, Google Chrome or safari. These are the best working browsers compatible with a laptop. Internet Explorer 8 and 9 are a little out of date. We have styled our CSS so that the display and functionalities of our website can work for these browsers.
+
+## Important Links:
 [Link to User Manual (Google Doc)](https://docs.google.com/document/d/1cLMq8jR0l8AG-hz8K_ZQ-W1nrwzWtYoeufdQzZRSvDE/edit#)
 
 [Link to Developer Manual (Google Doc)](https://docs.google.com/document/d/1Yo4UDBcLPntDAEJHiYOgFyC4TR3Ws8pWORY2qPcRz0c/edit?usp=sharing)
@@ -17,10 +22,6 @@ While our system does provide similar solutions to existing systems such as Goog
 [Link to Final Report (Google Doc)](https://docs.google.com/document/d/1w4GnI6qQ89Y5ZV0-3-qLQ7_EA2mqKeETamxbQIx2eiE/edit?usp=sharing)
 
 [Link to Heroku site](https://intense-basin-08466.herokuapp.com/index.html)
-
-## Target Browsers:
-
-We expect users of our website to be using browsers on laptops. This means that laptops are the target devices. Users who are on a laptop should use browsers such as Firefox, Google Chrome or safari. These are the best working browsers compatible with a laptop. Internet Explorer 8 and 9 are a little out of date. We have styled our CSS so that the display and functionalities of our website can work for these browsers.
 
 ## Developers Manual:
 
