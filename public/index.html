@@ -80,34 +80,12 @@
 
 
 
-      <!-- Image of location/map
-<img src="/w3images/map.jpg" class="w3-image w3-greyscale-min" style="width:100%">
--->
-
-
 
       <script>
 
-        // Automatic Slideshow - change image every 4 seconds
-        /*
-        var myIndex = 0;
-        carousel();
-
-        function carousel() {
-          var i;
-          var x = document.getElementsByClassName("mySlides");
-          for (i = 0; i < x.length; i++) {
-            x[i].style.display = "none";
-          }
-          myIndex++;
-          if (myIndex > x.length) { myIndex = 1 }
-          x[myIndex - 1].style.display = "block";
-          setTimeout(carousel, 4000);
-        }
-
         // Used to toggle the menu on small screens when clicking on the menu button
         function myFunction() {
-          var x = document.getElementById("navDemo");
+          let x = document.getElementById("navDemo");
           if (x.className.indexOf("w3-show") == -1) {
             x.className += " w3-show";
           } else {
@@ -116,32 +94,24 @@
         }
 
         // When the user clicks anywhere outside of the modal, close it
-        var modal = document.getElementById('ticketModal');
+        let modal = document.getElementById('ticketModal');
         window.onclick = function (event) {
           if (event.target == modal) {
             modal.style.display = "none";
           }
         }
-        // Initialize and add the map
-        /*function initMap() {
-          // The location of Uluru
-          var uluru = {lat: 38.971500, lng: -76.940308};
-                  // The map, centered at Uluru
-                  var map = new google.maps.Map(
-              document.getElementById('map'), {zoom: 6, center: uluru});
-              // The marker, positioned at Uluru
-          var marker = new google.maps.Marker({position: uluru, map: map});
-                }
-                */
-        /* Leaflet Code */
-        /* Not using post for now */
+ 
+        /* used to clear leaflet */
         let markerGroup = '';
+
+        /* When selecting a district, run both of these */
 
         function onClick(){
           clearData();
           loadLeaflet();
         }
 
+        /* Forces the table to be empty and populates */
         function tableheader() {
           let table = document.getElementById("table");
           table.innerHTML = '';
@@ -150,6 +120,8 @@
             .then(res => res.json())
             .then(res => {
               console.log(res);
+
+        /* Always start with labels */
                 header = ['Address', 'Posted Speed', 'Enforced Speed'];
                 let row = table.insertRow(-1);
                 let cell1 = row.insertCell(0);
@@ -158,7 +130,7 @@
                 cell1.innerHTML = 'Address';
                 cell2.innerHTML = 'Posted Speed';
                 cell3.innerHTML = 'Enforced Speed';
-
+        /* Use res from fetch to populate with data */
               for(let i=0; i<res.length; i++){
                 let row = table.insertRow(-1);
                 let cell1 = row.insertCell(0);
@@ -172,6 +144,8 @@
         })
 
         }
+
+        /*Remove the layer if exists */
         function clearData() {
           if(map.hasLayer(markerGroup)){
             map.removeLayer(markerGroup);
@@ -194,7 +168,7 @@
                   .bindPopup(res[i][0] + ", Posted Speed: " + res[i][3] + ", Enforced Speed: " + res[i][4])
                   .addTo(markerGroup);
               }
-              /* Double check (comment out when done) */
+              /* Populate table */
               tableheader();
               return res;
             }
@@ -206,14 +180,14 @@
 
       </script>
       <script>
-        var map = L.map('map', {
+        let map = L.map('map', {
           center: [38.989697, -76.937759],
           zoom: 10
         });
         L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
           attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
         }).addTo(map);
-        var icon = L.divIcon({
+        let icon = L.divIcon({
           className: 'custom-div-icon',
           html: "<div style='background-color:#4838cc;' class='marker-pin'></div><i class='fa fa-camera awesome'>",
           iconSize: [30, 42],
