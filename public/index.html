@@ -87,6 +87,13 @@
 
       <div id="map"></div>
 
+      <br><br>
+
+      <table id='table' width="100%" border="1">
+
+      </table>
+
+
 
       <!-- Image of location/map
 <img src="/w3images/map.jpg" class="w3-image w3-greyscale-min" style="width:100%">
@@ -144,6 +151,37 @@
         /* Leaflet Code */
         /* Not using post for now */
 
+        function tableheader() {
+          let table = document.getElementById("table");
+          table.innerHTML = '';
+          let drop = document.getElementById("dropdown");
+          fetch('/table/' + drop.options[drop.selectedIndex].text)
+            .then(res => res.json())
+            .then(res => {
+              console.log(res);
+                header = ['Address', 'Posted Speed', 'Enforced Speed'];
+                let row = table.insertRow(-1);
+                let cell1 = row.insertCell(0);
+                let cell2 = row.insertCell(1);
+                let cell3 = row.insertCell(2);
+                cell1.innerHTML = 'Address';
+                cell2.innerHTML = 'Posted Speed';
+                cell3.innerHTML = 'Enforced Speed';
+
+              for(let i=0; i<res.length; i++){
+                let row = table.insertRow(-1);
+                let cell1 = row.insertCell(0);
+                let cell2 = row.insertCell(1);
+                let cell3 = row.insertCell(2);
+                cell1.innerHTML = res[i][0];
+                cell2.innerHTML = res[i][1];
+                cell3.innerHTML = res[i][2];
+                }
+              return res;
+        })
+        }
+      
+
         function loadLeaflet() {
           
           let drop = document.getElementById("dropdown");
@@ -151,7 +189,6 @@
           fetch('/leaflet/' + drop.options[drop.selectedIndex].text)
             .then(res => res.json())
             .then(res => {
-              console.log(res);
               /* Populate Leaflet map */
               let marker = [];
               for (let i = 0; i < res.length; i++) {
@@ -160,11 +197,15 @@
                   .addTo(map);
               }
               /* Double check (comment out when done) */
+              tableheader();
               return res;
             }
             )
         }
       
+
+
+
       </script>
       <script>
         var map = L.map('map', {

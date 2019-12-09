@@ -39,7 +39,7 @@ app.use(express.static('public'));
 
 app.get('/leaflet/:option', async (req, res) => {
   const currOption = req.params.option;
-const baseURL = 'https://data.princegeorgescountymd.gov/resource/mnkf-cu5c.json';
+  const baseURL = 'https://data.princegeorgescountymd.gov/resource/mnkf-cu5c.json';
   await fetch(baseURL, {
   method: 'GET'
 })
@@ -69,6 +69,40 @@ const baseURL = 'https://data.princegeorgescountymd.gov/resource/mnkf-cu5c.json'
     res.redirect('/error');
   });
 });  
+
+
+app.get('/table/:option', async (req, res) => {
+  const currOption = req.params.option;
+  const baseURL = 'https://data.princegeorgescountymd.gov/resource/mnkf-cu5c.json';
+  await fetch(baseURL, {
+  method: 'GET'
+})
+  .then((r) => r.json())
+  .then((data) => {
+    let district = data.map(c => c.district);
+    let address = data.map(c => c.street_address);
+    let posted = data.map(c => c.posted_speed);
+    let enforced = data.map(c => c.enforcement);
+    let arr = [];
+    let ele = [];
+
+    /* Iterate through to create desired arrays*/
+    
+    for (let i = 0; i < district.length; i++) {
+      if (district[i] === currOption) {
+        ele = [address[i], posted[i], enforced[i]]
+        arr.push(ele);
+      }
+    }
+    res.json(arr);
+  })
+  .catch((err) => {
+    console.log(err);
+    res.redirect('/error');
+  });
+});  
+
+
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));
 
