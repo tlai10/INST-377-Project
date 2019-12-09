@@ -86,12 +86,12 @@
       <br>
       <br>
       <br>
-      <br>       
-   
+      <br>
+
       <div id="map"></div>
 
-      
-      <!-- Image of location/map 
+
+      <!-- Image of location/map
 <img src="/w3images/map.jpg" class="w3-image w3-greyscale-min" style="width:100%">
 -->
 
@@ -167,13 +167,9 @@
               /* Make readable */
               arr = arr.join('\n');
               for (var i = 0; i < arr.length; i++) {
-                var lon = arr[i][2];
-                var lat = arr[i][1];
-                var popupText = arr[i][0];
-                var markerLocation = new L.LatLng(lat, lon);
-                var marker = new L.Marker(markerLocation);
-                map.addLayer(marker);
-                marker.bindPopup(popupText);
+                marker = new L.marker([arr[i][1], arr[i][2]], { icon: icon })
+                  .bindPopup(markers[i][0])
+                  .addTo(map);
               }
               /* Double check (comment out when done) */
               console.log(arr);
@@ -196,22 +192,6 @@
           iconSize: [30, 42],
           iconAnchor: [15, 42]
         });
-        var markers = [
-          [38.952593, -76.942069, "Posted Speed: 25, Enforced Speed: 37"],
-          [39.003744, -76.967017, "Posted Speed: 30, Enforced Speed: 42"],
-          [39.104911, -76.866641, "Posted Speed: 40, Enforced Speed: 52"],
-          [38.80328, -76.99046, "Posted Speed: 30, Enforced Speed: 42"],
-          [39.035252, -76.918569, "Posted Speed: 25, Enforced Speed: 37"],
-          [38.818501, -76.75007, "Posted Speed: 30, Enforced Speed: 42"],
-          [38.960971, -76.740467, "Posted Speed: 30, Enforced Speed: 42"],
-          [38.704471, -76.882348, "Posted Speed: 30, Enforced Speed: 42"],
-          [38.879544, -76.826481, "Posted Speed: 35, Enforced Speed: 47"],
-        ];
-        for (var i = 0; i < markers.length; i++) {
-          marker = new L.marker([markers[i][0], markers[i][1]], { icon: icon })
-            .bindPopup(markers[i][2])
-            .addTo(map);
-        }
       </script>
 </body>
 
