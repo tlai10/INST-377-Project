@@ -53,7 +53,7 @@ Once you have cloned the repository, here are the instructions to get the websit
 
 ### About our API's:
 
-
+When selecting a district, our front-end makes a request to the back-end while also sending the currently selected option from the drop-down bar. The back-end then gets all of the data from the Prince George's County database and filters out the data based on what district was sent from the front-end. For the Leaflet map, the back-end will send an array containining arrays of [address, latitude, longitude, posted speed, enforced speed]. After the back-end sends a filtered array of arrays, the front-end will be able to use this data to populate the Leaflet map with markers that display the address and speeds. For the table, the back-end will send an array containing arrays of [address, posted speed, enforced speed]. Afterwards, the front-end will be able to populate a table using this array. Everytime a new district is selected, the Leaflet map will clear all markers and the table will empty itself of previously added entries. 
 ### Libraries and their dependencies:
 
 Leaflet - Leaflet is an open source JavaScript library used to build web mapping applications
