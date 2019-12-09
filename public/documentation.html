@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" type="text/css" href="styles.css">
+  <link rel="stylesheet" type="text/css" href="styles/styles.css">
 
 </head>
  
@@ -28,7 +28,7 @@
 <div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
   <a href="#about" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">ABOUT</a>
   <a href="#documentation" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">DOCUMENTATION</a>
-  <a href="#" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">MERCH</a>
+  <a href="#" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()"></a>
 </div>
  
 <!-- Page content -->
@@ -37,11 +37,6 @@
   <!-- The about Section -->
   <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="about">
     <h2 class="w3-wide">Documentation Page</h2>
-
-    <!-- Borrowed from visual studio magazine -->
-    <!--
-    <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fvisualstudiomagazine.com%2F~%2Fmedia%2FECG%2Fvisualstudiomagazine%2FImages%2Fintroimages%2FDocumentStack.jpg&f=1&nofb=1" style="width:100%">
-    -->
 
      <!-- Slideshow container -->
 <div class="slideshow-container">
@@ -64,8 +59,6 @@
     <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.algebranation.com%2Ffl%2Fwp-content%2Fthemes%2Falgebranation%2Fimg%2Fstudents.png&f=1&nofb=1" style="width:100%">
     <div class="text">Caption Three</div>
   </div>
-
-
 
 <!-- The dots/circles -->
 <div style="text-align:center">
@@ -126,8 +119,8 @@ showSlides();
 
 function showSlides() {
   var i;
-  var slides = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("dot");
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
   for (i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";  
   }
