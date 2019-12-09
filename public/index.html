@@ -156,7 +156,7 @@
               let marker = [];
               for (let i = 0; i < res.length; i++) {
                 marker = new L.marker([res[i][1], res[i][2]], { icon: icon })
-                  .bindPopup(res[i][0])
+                  .bindPopup(res[i][0] + ", Posted Speed: " + res[i][3] + ", Enforced Speed: " + res[i][4])
                   .addTo(map);
               }
               /* Double check (comment out when done) */
