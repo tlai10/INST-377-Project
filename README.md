@@ -87,3 +87,6 @@ express - Express is a web application wirefram by node.js. This is what helps u
 Fetch - fetch allows one to make network requests, with the use of promises, to enable a clean API. We primarily used fetch as it we were able to practice a lot with it in class. This practice made us confident that we could use fetch to obtain the data we needed to for the purpose of the assignment.
 
 Heroku - Heroku is the application that we are using to host our website. This was fairly simple for us to use, making it the perfect host for the purpose of the assignment. Additionally, this was a recommended service.
+
+Link to Final Report:
+https://docs.google.com/document/d/1w4GnI6qQ89Y5ZV0-3-qLQ7_EA2mqKeETamxbQIx2eiE/edit?usp=sharing
