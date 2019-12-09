@@ -58,7 +58,7 @@
       <br>
       <h3>Search for Speed Traps by Prince George's County District:</h3>
 
-      <select id="dropdown" onChange="loadLeaflet()">
+      <select id="dropdown" onChange="onClick()">
         <option value="">Select a district</option>
         <option value="I">I</option>
         <option value="II">II</option>
@@ -135,6 +135,12 @@
                 */
         /* Leaflet Code */
         /* Not using post for now */
+        let markerGroup = '';
+
+        function onClick(){
+          clearData();
+          loadLeaflet();
+        }
 
         function tableheader() {
           let table = document.getElementById("table");
@@ -164,22 +170,29 @@
                 }
               return res;
         })
-        }
-      
 
+        }
+        function clearData() {
+          if(map.hasLayer(markerGroup)){
+            map.removeLayer(markerGroup);
+          }
+        }
+        
+        
         function loadLeaflet() {
           
           let drop = document.getElementById("dropdown");
-         
+          markerGroup = L.layerGroup().addTo(map);
           fetch('/leaflet/' + drop.options[drop.selectedIndex].text)
             .then(res => res.json())
             .then(res => {
               /* Populate Leaflet map */
               let marker = [];
+  
               for (let i = 0; i < res.length; i++) {
                 marker = new L.marker([res[i][1], res[i][2]], { icon: icon })
                   .bindPopup(res[i][0] + ", Posted Speed: " + res[i][3] + ", Enforced Speed: " + res[i][4])
-                  .addTo(map);
+                  .addTo(markerGroup);
               }
               /* Double check (comment out when done) */
               tableheader();
