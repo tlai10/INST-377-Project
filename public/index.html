@@ -58,20 +58,17 @@
       <br>
       <h3>Search for Speed Traps by Prince George's County District:</h3>
 
-      <div class="dropdown">
-        <button class="dropbtn">Dropdown</button>
-        <div class="dropdown-content">
-          <a href="#">I</a>
-          <a href="#">II</a>
-          <a href="#">III</a>
-          <a href="#">IV</a>
-          <a href="#">V</a>
-          <a href="#">VI</a>
-        </div>
-      </div>
+      <select id="dropdown" onChange="loadLeaflet()">
+        <option value="">Select a district</option>
+        <option value="I">I</option>
+        <option value="II">II</option>
+        <option value="III">III</option>
+        <option value="IV">IV</option>
+        <option value="V">V</option>
+        <option value="VI">VI</option>
+      </select>
 
-      <!-- Clickable button -->
-      <!--<button class="button" onclick="loadLeaflet()">Select District</button> -->
+
       <br>
       <br>
       <br>
@@ -98,7 +95,9 @@
 
 
       <script>
+
         // Automatic Slideshow - change image every 4 seconds
+        /*
         var myIndex = 0;
         carousel();
 
@@ -144,39 +143,28 @@
                 */
         /* Leaflet Code */
         /* Not using post for now */
+
         function loadLeaflet() {
-          fetch('/leaflet')
+          
+          let drop = document.getElementById("dropdown");
+         
+          fetch('/leaflet/' + drop.options[drop.selectedIndex].text)
             .then(res => res.json())
-            .then(data => {
-              /* Map all needed variables, keep district for indexing/filtering */
-              let district = data.map(c => c.district);
-              let address = data.map(c => c.street_address);
-              let latitude = data.map(c => c.location_1.latitude);
-              let longitude = data.map(c => c.location_1.longitude);
-              let arr = [];
-              let ele = [];
-              let drop = document.getElementById("dropdown");
-              let currOption = drop.options[drop.selectedIndex].textContent;
-              /* Iterate through to create desired arrays*/
-              for (let i = 0; i < district.length; i++) {
-                if (district[i] === currOption) {
-                  ele = [address[i], latitude[i], longitude[i]]
-                  arr[i] = ele;
-                }
-              }
-              /* Make readable */
-              arr = arr.join('\n');
-              for (var i = 0; i < arr.length; i++) {
-                marker = new L.marker([arr[i][1], arr[i][2]], { icon: icon })
-                  .bindPopup(markers[i][0])
+            .then(res => {
+              console.log(res);
+              /* Populate Leaflet map */
+              let marker = [];
+              for (let i = 0; i < res.length; i++) {
+                marker = new L.marker([res[i][1], res[i][2]], { icon: icon })
+                  .bindPopup(res[i][0])
                   .addTo(map);
               }
               /* Double check (comment out when done) */
-              console.log(arr);
-              return arr;
+              return res;
             }
             )
         }
+      
       </script>
       <script>
         var map = L.map('map', {

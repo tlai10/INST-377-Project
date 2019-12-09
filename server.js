@@ -36,72 +36,72 @@ app.use(express.json());
  *    https://expressjs.com/en/4x/api.html#app.use
  */
 app.use(express.static('public'));
-
-    /* Function to check for unique values */
-    function contains(arr, value) {
-      for(let i=0; i<arr.length; i++){
-        if(arr[i] === value){
-          continue;
-        } else {
-        return false;
-        }
-      }
-      return true;
-    }
-
-
-app.get('dropdown', (req, res) => {
+/*
+app.get('/leaflet', (req, res) => {
   const baseURL = 'https://data.princegeorgescountymd.gov/resource/mnkf-cu5c.json';
-  fetch(baseURL)
+    await fetch(baseURL, {
+    method: 'POST',
+    body: currOption,
+    headers: {'Content-Type': 'text/HTML'}
+  })
     .then((r) => r.json())
     .then((data) => {
-    /* Function to check for unique values */
-    function contains(arr, value) {
-      if(arr.length === 0){
-        return false;
-      }
-      for(let i=0; i<arr.length; i++){
-        if(arr[i] === value){
-          continue;
-        } else {
-        return false;
+      let currOption = 'II';
+      let district = data.map(c => c.district);
+      let address = data.map(c => c.street_address);
+      let latitude = data.map(c => c.location_1.latitude);
+      let longitude = data.map(c => c.location_1.longitude);
+      let arr = [];
+      let ele = [];
+
+
+
+      for (let i = 0; i < district.length; i++) {
+        if (district[i] === currOption) {
+          ele = [address[i], latitude[i], longitude[i]]
+          arr.push(ele);
         }
+        console.log(arr)
       }
-      return true;
-    }
-    /* Get the districts */
-    let alldistricts = [];
-    alldistricts = data.map(c => c.district); 
-
-    /* Creating unique district */
-    let uniquedistricts = []
-    for(let i=0; i<alldistricts.length; i++){
-      if(!contains(uniquedistricts, alldistricts[i])){
-        uniquedistricts.push(alldistricts[i]);
-        }
-      }
-    /* Send arr of unique districts to front end */
-      res.send({ uniquedistricts: uniquedistricts});
-    })
-    
-    .catch((err) => {
-      console.log(err);
-      res.redirect('/error');
-    });
-});
-
-
-app.get('leaflet', (req, res) => {
-  const baseURL = 'https://data.princegeorgescountymd.gov/resource/mnkf-cu5c.json';
-  fetch(baseURL)
-    .then((r) => r.json())
-    .then((data) => {
-      res.send({ data: data });
+      res.send({ arr: arr });
     })
     .catch((err) => {
       console.log(err);
       res.redirect('/error');
     });
 }); 
+*/
+app.get('/leaflet/:option', async (req, res) => {
+  const currOption = req.params.option;
+const baseURL = 'https://data.princegeorgescountymd.gov/resource/mnkf-cu5c.json';
+  await fetch(baseURL, {
+  method: 'GET'
+})
+  .then((r) => r.json())
+  .then((data) => {
+    let district = data.map(c => c.district);
+    let address = data.map(c => c.street_address);
+    let latitude = data.map(c => c.location_1.latitude);
+    let longitude = data.map(c => c.location_1.longitude);
+    let arr = [];
+    let ele = [];
+    console.log(currOption);
+    /* Iterate through to create desired arrays*/
+    
+    for (let i = 0; i < district.length; i++) {
+      if (district[i] === currOption) {
+        ele = [address[i], latitude[i], longitude[i]]
+        arr.push(ele);
+      }
+    }
+    console.log(arr);
+    res.json(arr);
+  })
+  .catch((err) => {
+    console.log(err);
+    res.redirect('/error');
+  });
+});  
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));
+
