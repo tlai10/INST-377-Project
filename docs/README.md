@@ -38,7 +38,7 @@ Once you have cloned the repository, here are the instructions to get the websit
 
 6. Navigate to a Google Chrome browser and type in "localhost:5000" and you should see a working version of the website. When finished, hit ctrl-C to end. Some Organizational Notes:
 
-For Heroku:
+### For Heroku:
 
 1. Open up a terminal in your computer.
 
@@ -50,7 +50,10 @@ For Heroku:
 
 5. If changes were made, type git add. --> git commit -m "" --> git push heroku master, to push the changes, so the webpage will display based on the changes you made.
 
-## Libraries and their dependencies
+### About our API's:
+
+
+### Libraries and their dependencies
 
 Leaflet - Leaflet is an open source JavaScript library used to build web mapping applications
 
