@@ -53,7 +53,7 @@ Once you have cloned the repository, here are the instructions to get the websit
 ### About our API's:
 
 
-### Libraries and their dependencies
+### Libraries and their dependencies:
 
 Leaflet - Leaflet is an open source JavaScript library used to build web mapping applications
 
