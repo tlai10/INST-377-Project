@@ -33,11 +33,14 @@ Once you have cloned the repository, here are the instructions to get the websit
 
 3. Type npm install --- save node-fetch. This only needs to be done on the first run of the server.
 
-4. Type npm start. This will start the server and allow the website to be run.
+4. Type npm start. This will start the server and allow the website to run.
 
 5. Now you can access the website. You will see a prompt in the terminal that says "Example app listening on port 5000!"
 
-6. Navigate to a Google Chrome browser and type in "localhost:5000" and you should see a working version of the website. When finished, hit ctrl-C to end. Some Organizational Notes:
+6. Navigate to a Google Chrome browser and type in "localhost:5000" and you should see a working version of the website. When finished, hit ctrl-C to end. 
+
+
+### Some Organizational Notes:
 
 ### For Heroku:
 
@@ -45,11 +48,11 @@ Once you have cloned the repository, here are the instructions to get the websit
 
 2. Navigate with terminal to the folder that the repository is held in.
 
-3. Type heroku login.
+3. Type "heroku login" .
 
-4. Type heroku open to open the application.
+4. Type "heroku open" to open the application.
 
-5. If changes were made, type git add. --> git commit -m "" --> git push heroku master, to push the changes, so the webpage will display based on the changes you made.
+5. If changes were made, type "git add ." -->  "git commit -m "" " --> "git push heroku master", to push the changes, so the webpage will display based on the changes you made.
 
 ### About our API's:
 
