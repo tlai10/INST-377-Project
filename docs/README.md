@@ -5,14 +5,14 @@ This repository was created for the group project in INST 377 (0103) for Team 5 
 We are attempting to address and bring attention to the negative effects of speed traps in Prince George’s County through creating a mapping application. This will provide the locations as well as posted and enforced speed limits at each camera. Our information problem evolved from our initial problem of simply increasing awareness of speed cameras because we realized that there were already applications in place to address this problem such as Google Maps and Waze.
 
 ## Stakeholders and Target Browsers
-Our primary stakeholders are drivers in Prince George’s County. We further divided our stakeholders into subgroups including University of Maryland students, daily drivers, commercial drivers, and rideshare/taxi drivers. The specific subgroups attempt to address those that are most widely affected by hidden speed cameras in the county.
+Our primary stakeholders are drivers in Prince George’s County. We further divided our stakeholders into subgroups including the University of Maryland College Park students, daily drivers, commercial drivers, and rideshare/taxi drivers. The specific subgroups attempt to address those that are most widely affected by hidden speed cameras in the county.
 
 ## How our Final System Addresses the Problem
-While our system does provide similar solutions to existing systems such as Google Maps and Waze, we attempt to further inform our users of the purpose of our specific project. In particular through our about page, we provide background information on speed cameras in Prince George’s County as well as past and ongoing legislation regarding the continued implementation of cameras in the county. By keeping users up to date with what is happening in the area, we are able to keep users informed of both the benefits and dangers that speed cameras can pose to drivers.
+While our system does provide similar solutions to existing systems such as Google Maps and Waze, we attempt to further inform our users of the purpose of our specific project. In particular, through our about page, we provide background information on speed cameras in Prince George’s County as well as past and ongoing legislation regarding the continued implementation of cameras in the county. By keeping users up to date with what is happening in the area, we can keep users informed of both the benefits and dangers that speed cameras can pose to drivers.
 
 ## Target Browsers:
 
-We expect users of our website to be using browsers on laptops. This means that laptops are the target devices. Users who are on a laptop should use browsers such as Firefox, Google Chrome or safari. These are the best working browsers compatible with a laptop. Internet Explorer 8 and 9 are a little out of date. We have styled our CSS so that the display and functionalities of our website can work for these browsers.
+We expect users of our website to be using web browsers on laptops, therefore, laptops are the target devices. Users who are on a laptop should use web browsers such as Firefox, Google Chrome, or Safari. These are the best working web browsers compatible with a laptop. Internet Explorer 8 and 9 are little out of date. We have styled our CSS so that the display and functionalities of our website can work for these browsers.
 
 ## Important Links:
 [Link to User Manual as a Google Doc (can also be found in the 'docs' folder)](https://docs.google.com/document/d/1cLMq8jR0l8AG-hz8K_ZQ-W1nrwzWtYoeufdQzZRSvDE/edit#)
