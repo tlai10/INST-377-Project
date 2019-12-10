@@ -56,18 +56,18 @@ Once you have cloned the repository, here are the instructions to get the websit
 
 ### About our API's:
 
-When selecting a district, our front-end makes a request to the back-end while also sending the currently selected option from the drop-down bar. The back-end then gets all of the data from the Prince George's County database and filters out the data based on what district was sent from the front-end. For the Leaflet map, the back-end will send an array containing arrays of [address, latitude, longitude, posted speed, enforced speed]. After the back-end sends a filtered array of arrays, the front-end will be able to use this data to populate the Leaflet map with markers that display the address and speeds. For the table, the back-end will send an array containing arrays of [address, posted speed, enforced speed]. Afterwards, the front-end will be able to populate a table using this array. Every time a new district is selected, the Leaflet map will clear all markers and the table will empty itself of previously added entries. 
+When selecting a district, our front-end makes a request to the back-end while also sending the currently selected option from the drop-down menu. The back-end then gets all of the data from the Prince George's County database and filters out the data based on what district was sent from the front-end. For the Leaflet map, the back-end will send an array containing arrays of [address, latitude, longitude, posted speed, enforced speed]. After the back-end sends a filtered array of arrays, the front-end will be able to use this data to populate the Leaflet map with markers that display the address and speeds. For the table, the back-end will send an array containing arrays of [address, posted speed, enforced speed]. Afterward, the front-end will be able to populate a table using this array. Every time a new district is selected, the Leaflet map will clear all markers and the table will empty itself of previously added entries. 
 
-POST and PUT requests were attempted, but were unable to be implemented so our API only uses GET requests. 
+POST and PUT requests were attempted but were unable to be implemented so our API only uses GET requests.
 
 ### Libraries and their dependencies:
 
-Leaflet - Leaflet is an open source JavaScript library used to build web mapping applications
+Leaflet - Leaflet is an open-source JavaScript library used to build web mapping applications
 
-node.js - This is the library that allowed us to build the web server for our website. We chose this library because it was the recommended one, and it comes with powerful tools like express, that make managing the framework a lot more feasible.
+node.js - This is the library that allowed us to build the web server for our website. We chose this library because it was the recommended one, and it comes with powerful tools like Express, which makes managing the framework a lot more feasible.
 
-express - Express is a web application wireframe by node.js. This is what helps us organize the back end our application on the server side. Specific things that express does for our site is handling requests and views.
+Express - Express is a web application wireframe by node.js. This is what helps us organize the back end of our application on the server-side. Specific things that Express does for our site is handling requests and views.
 
-Fetch - fetch allows one to make network requests, with the use of promises, to enable a clean API. We primarily used fetch as it we were able to practice a lot with it in class. This practice made us confident that we could use fetch to obtain the data we needed to for the purpose of the assignment.
+Fetch - fetch allows one to make network requests, with the use of promises, to enable a clean API. We primarily used fetch as we were able to practice a lot with it in class. This practice made us confident that we could use fetch to obtain the data we needed for the purpose of the assignment.
 
 Heroku - Heroku is the application that we are using to host our website. This was fairly simple for us to use, making it the perfect host for the purpose of the assignment. Additionally, this was a recommended service.
